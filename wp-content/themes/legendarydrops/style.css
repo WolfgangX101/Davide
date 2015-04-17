@@ -18,7 +18,8 @@
 
 .left-sidebar .widget-area {
 	background: rgba(155, 0, 0, 0.35);
-	padding: 1.618em;
+	padding: 1.618em 10px 1.618em 10px;
+	margin-right: 1.618%;
 	
 }
 
@@ -32,4 +33,74 @@
 
 .content-area, .widget-area {
     margin-bottom: 0;
+}
+
+.woocommerce-breadcrumb {
+    display: none;
+}
+
+.widget h3.widget-title {
+	padding: 0;
+	border-bottom: 1px solid #FFFF00;
+	margin-bottom: 0.618em;
+	font-size: 1.918em;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.hentry {
+    margin: 0;
+    padding-bottom: 0;
+    border-bottom: 0 solid rgba(0, 0, 0, 0.05);
+}
+
+.hentry .entry-header h1 {
+    border-bottom: 1px solid #FFFF00;
+    margin: 0;
+    padding-bottom: 0;
+	font-size: 1.918em;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.hentry .entry-header {
+    border-bottom: 0px solid #60646C;
+    margin-bottom: 1.618em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: fantasy,sans-serif;
+}
+
+.site-info {
+    padding: 1.618em;
+}
+
+.footer-widgets {
+    border-bottom: 0px solid rgba(0, 0, 0, 0.05);
+    padding: 1.618em;
+}
+
+.site-footer {
+    padding: 1.618em;
+}
+
+body, button, input, select, textarea {
+	font-family: fantasy,sans-serif;
+}
+
+.woocommerce-active .site-header .main-navigation {
+	font-size: 1.150em;
+    font-weight: bolder;
+}
+
+.site-header {
+	padding: 1.618em 0 0 0;
+}
+
+.main-navigation ul.menu > li > a, .main-navigation ul.nav-menu > li > a {
+    padding: 0 1em 0 0;
+    margin-bottom: 10px;
 }
