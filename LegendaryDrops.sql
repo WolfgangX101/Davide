@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 17, 2015 alle 08:57
+-- Generation Time: Apr 17, 2015 alle 09:06
 -- Versione del server: 5.6.17
 -- PHP Version: 5.5.14
 
@@ -411,30 +411,6 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 -- --------------------------------------------------------
 
 --
--- Struttura della tabella `wp_terms`
---
-
-CREATE TABLE IF NOT EXISTS `wp_terms` (
-`term_id` bigint(20) unsigned NOT NULL,
-  `name` varchar(200) NOT NULL DEFAULT '',
-  `slug` varchar(200) NOT NULL DEFAULT '',
-  `term_group` bigint(10) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
-
---
--- Dump dei dati per la tabella `wp_terms`
---
-
-INSERT INTO `wp_terms` (`term_id`, `name`, `slug`, `term_group`) VALUES
-(1, 'Senza categoria', 'senza-categoria', 0),
-(2, 'simple', 'simple', 0),
-(3, 'grouped', 'grouped', 0),
-(4, 'variable', 'variable', 0),
-(5, 'external', 'external', 0);
-
--- --------------------------------------------------------
-
---
 -- Struttura della tabella `wp_term_relationships`
 --
 
@@ -476,6 +452,30 @@ INSERT INTO `wp_term_taxonomy` (`term_taxonomy_id`, `term_id`, `taxonomy`, `desc
 (3, 3, 'product_type', '', 0, 0),
 (4, 4, 'product_type', '', 0, 0),
 (5, 5, 'product_type', '', 0, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Struttura della tabella `wp_terms`
+--
+
+CREATE TABLE IF NOT EXISTS `wp_terms` (
+`term_id` bigint(20) unsigned NOT NULL,
+  `name` varchar(200) NOT NULL DEFAULT '',
+  `slug` varchar(200) NOT NULL DEFAULT '',
+  `term_group` bigint(10) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+
+--
+-- Dump dei dati per la tabella `wp_terms`
+--
+
+INSERT INTO `wp_terms` (`term_id`, `name`, `slug`, `term_group`) VALUES
+(1, 'Senza categoria', 'senza-categoria', 0),
+(2, 'simple', 'simple', 0),
+(3, 'grouped', 'grouped', 0),
+(4, 'variable', 'variable', 0),
+(5, 'external', 'external', 0);
 
 -- --------------------------------------------------------
 
@@ -603,6 +603,19 @@ CREATE TABLE IF NOT EXISTS `wp_woocommerce_order_items` (
 -- --------------------------------------------------------
 
 --
+-- Struttura della tabella `wp_woocommerce_tax_rate_locations`
+--
+
+CREATE TABLE IF NOT EXISTS `wp_woocommerce_tax_rate_locations` (
+`location_id` bigint(20) NOT NULL,
+  `location_code` varchar(255) NOT NULL,
+  `tax_rate_id` bigint(20) NOT NULL,
+  `location_type` varchar(40) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
 -- Struttura della tabella `wp_woocommerce_tax_rates`
 --
 
@@ -617,19 +630,6 @@ CREATE TABLE IF NOT EXISTS `wp_woocommerce_tax_rates` (
   `tax_rate_shipping` int(1) NOT NULL DEFAULT '1',
   `tax_rate_order` bigint(20) NOT NULL,
   `tax_rate_class` varchar(200) NOT NULL DEFAULT ''
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
-
--- --------------------------------------------------------
-
---
--- Struttura della tabella `wp_woocommerce_tax_rate_locations`
---
-
-CREATE TABLE IF NOT EXISTS `wp_woocommerce_tax_rate_locations` (
-`location_id` bigint(20) NOT NULL,
-  `location_code` varchar(255) NOT NULL,
-  `tax_rate_id` bigint(20) NOT NULL,
-  `location_type` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
@@ -686,12 +686,6 @@ ALTER TABLE `wp_posts`
  ADD PRIMARY KEY (`ID`), ADD KEY `post_name` (`post_name`), ADD KEY `type_status_date` (`post_type`,`post_status`,`post_date`,`ID`), ADD KEY `post_parent` (`post_parent`), ADD KEY `post_author` (`post_author`);
 
 --
--- Indexes for table `wp_terms`
---
-ALTER TABLE `wp_terms`
- ADD PRIMARY KEY (`term_id`), ADD KEY `slug` (`slug`), ADD KEY `name` (`name`);
-
---
 -- Indexes for table `wp_term_relationships`
 --
 ALTER TABLE `wp_term_relationships`
@@ -702,6 +696,12 @@ ALTER TABLE `wp_term_relationships`
 --
 ALTER TABLE `wp_term_taxonomy`
  ADD PRIMARY KEY (`term_taxonomy_id`), ADD UNIQUE KEY `term_id_taxonomy` (`term_id`,`taxonomy`), ADD KEY `taxonomy` (`taxonomy`);
+
+--
+-- Indexes for table `wp_terms`
+--
+ALTER TABLE `wp_terms`
+ ADD PRIMARY KEY (`term_id`), ADD KEY `slug` (`slug`), ADD KEY `name` (`name`);
 
 --
 -- Indexes for table `wp_usermeta`
@@ -740,16 +740,16 @@ ALTER TABLE `wp_woocommerce_order_items`
  ADD PRIMARY KEY (`order_item_id`), ADD KEY `order_id` (`order_id`);
 
 --
--- Indexes for table `wp_woocommerce_tax_rates`
---
-ALTER TABLE `wp_woocommerce_tax_rates`
- ADD PRIMARY KEY (`tax_rate_id`), ADD KEY `tax_rate_country` (`tax_rate_country`), ADD KEY `tax_rate_state` (`tax_rate_state`), ADD KEY `tax_rate_class` (`tax_rate_class`), ADD KEY `tax_rate_priority` (`tax_rate_priority`);
-
---
 -- Indexes for table `wp_woocommerce_tax_rate_locations`
 --
 ALTER TABLE `wp_woocommerce_tax_rate_locations`
  ADD PRIMARY KEY (`location_id`), ADD KEY `tax_rate_id` (`tax_rate_id`), ADD KEY `location_type` (`location_type`), ADD KEY `location_type_code` (`location_type`,`location_code`);
+
+--
+-- Indexes for table `wp_woocommerce_tax_rates`
+--
+ALTER TABLE `wp_woocommerce_tax_rates`
+ ADD PRIMARY KEY (`tax_rate_id`), ADD KEY `tax_rate_country` (`tax_rate_country`), ADD KEY `tax_rate_state` (`tax_rate_state`), ADD KEY `tax_rate_class` (`tax_rate_class`), ADD KEY `tax_rate_priority` (`tax_rate_priority`);
 
 --
 -- Indexes for table `wp_woocommerce_termmeta`
@@ -792,15 +792,15 @@ MODIFY `meta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 ALTER TABLE `wp_posts`
 MODIFY `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
--- AUTO_INCREMENT for table `wp_terms`
---
-ALTER TABLE `wp_terms`
-MODIFY `term_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
---
 -- AUTO_INCREMENT for table `wp_term_taxonomy`
 --
 ALTER TABLE `wp_term_taxonomy`
 MODIFY `term_taxonomy_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+--
+-- AUTO_INCREMENT for table `wp_terms`
+--
+ALTER TABLE `wp_terms`
+MODIFY `term_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `wp_usermeta`
 --
@@ -832,15 +832,15 @@ MODIFY `meta_id` bigint(20) NOT NULL AUTO_INCREMENT;
 ALTER TABLE `wp_woocommerce_order_items`
 MODIFY `order_item_id` bigint(20) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `wp_woocommerce_tax_rates`
---
-ALTER TABLE `wp_woocommerce_tax_rates`
-MODIFY `tax_rate_id` bigint(20) NOT NULL AUTO_INCREMENT;
---
 -- AUTO_INCREMENT for table `wp_woocommerce_tax_rate_locations`
 --
 ALTER TABLE `wp_woocommerce_tax_rate_locations`
 MODIFY `location_id` bigint(20) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `wp_woocommerce_tax_rates`
+--
+ALTER TABLE `wp_woocommerce_tax_rates`
+MODIFY `tax_rate_id` bigint(20) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `wp_woocommerce_termmeta`
 --
