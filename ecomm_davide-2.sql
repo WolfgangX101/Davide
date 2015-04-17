@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 17, 2015 alle 09:16
+-- Generation Time: Apr 17, 2015 alle 09:19
 -- Versione del server: 5.6.17
 -- PHP Version: 5.5.14
 
@@ -201,7 +201,7 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (95, 'widget_meta', 'a:2:{i:2;a:1:{s:5:"title";s:0:"";}s:12:"_multiwidget";i:1;}', 'yes'),
 (96, 'sidebars_widgets', 'a:8:{s:19:"wp_inactive_widgets";a:15:{i:0;s:7:"pages-3";i:1;s:10:"calendar-3";i:2;s:10:"archives-6";i:3;s:10:"nav_menu-3";i:4;s:31:"woocommerce_product_tag_cloud-3";i:5;s:31:"woocommerce_product_tag_cloud-6";i:6;s:22:"woocommerce_products-3";i:7;s:10:"archives-4";i:8;s:8:"search-2";i:9;s:6:"meta-2";i:10;s:12:"categories-2";i:11;s:10:"archives-2";i:12;s:17:"recent-comments-2";i:13;s:14:"recent-posts-2";i:14;s:10:"nav_menu-4";}s:9:"sidebar-1";a:5:{i:0;s:25:"woocommerce_widget_cart-3";i:1;s:32:"woocommerce_product_categories-3";i:2;s:31:"woocommerce_product_tag_cloud-5";i:3;s:38:"woocommerce_recently_viewed_products-3";i:4;s:32:"woocommerce_top_rated_products-3";}s:8:"header-1";a:0:{}s:8:"footer-1";a:0:{}s:8:"footer-2";a:1:{i:0;s:10:"nav_menu-5";}s:8:"footer-3";N;s:8:"footer-4";N;s:13:"array_version";i:3;}', 'yes'),
 (97, 'cron', 'a:11:{i:1429262692;a:1:{s:20:"jetpack_clean_nonces";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:6:"hourly";s:4:"args";a:0:{}s:8:"interval";i:3600;}}}i:1429262743;a:1:{s:32:"woocommerce_cancel_unpaid_orders";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:2:{s:8:"schedule";b:0;s:4:"args";a:0:{}}}}i:1429263981;a:1:{s:12:"qs_cron_hook";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:6:"hourly";s:4:"args";a:0:{}s:8:"interval";i:3600;}}}i:1429296900;a:1:{s:20:"wp_maybe_auto_update";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1429300705;a:3:{s:16:"wp_version_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:17:"wp_update_plugins";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:16:"wp_update_themes";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1429301499;a:1:{s:28:"woocommerce_cleanup_sessions";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1429318800;a:1:{s:27:"woocommerce_scheduled_sales";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1429343941;a:1:{s:19:"wp_scheduled_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1429344699;a:1:{s:30:"woocommerce_tracker_send_event";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1429347016;a:1:{s:30:"wp_scheduled_auto_draft_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}s:7:"version";i:2;}', 'yes'),
-(100, '_transient_random_seed', 'bd2370b367e23dc37365b853a02740e8', 'yes'),
+(100, '_transient_random_seed', '7d9e52202602e7f890c9fb21c0d63200', 'yes'),
 (113, 'can_compress_scripts', '1', 'yes'),
 (135, 'recently_activated', 'a:2:{s:51:"woocommerce-eu-vat-compliance/eu-vat-compliance.php";i:1427281243;s:35:"tax-rate-upload/tax-rate-upload.php";i:1427281006;}', 'yes'),
 (141, '_bbp_private_forums', 'a:0:{}', 'yes'),
@@ -1526,7 +1526,7 @@ CREATE TABLE IF NOT EXISTS `wp_usermeta` (
   `user_id` bigint(20) unsigned NOT NULL DEFAULT '0',
   `meta_key` varchar(255) DEFAULT NULL,
   `meta_value` longtext
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=24 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=44 ;
 
 --
 -- Dump dei dati per la tabella `wp_usermeta`
@@ -1546,7 +1546,7 @@ INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALU
 (11, 1, 'wp_user_level', '10'),
 (12, 1, 'dismissed_wp_pointers', 'wp360_locks,wp390_widgets,wp410_dfw'),
 (13, 1, 'show_welcome_panel', '1'),
-(14, 1, 'session_tokens', 'a:2:{s:64:"238585f112f6a0bb61b21f3c850c2d618511bbd888bfe03f01b326229cddb28c";a:4:{s:10:"expiration";i:1428307132;s:2:"ip";s:9:"127.0.0.1";s:2:"ua";s:118:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/600.3.18 (KHTML, like Gecko) Version/8.0.3 Safari/600.3.18";s:5:"login";i:1427097532;}s:64:"da7067f29414f6326e655b512e6b938da314ef256e4f73485e7d7405822ec9e3";a:4:{s:10:"expiration";i:1429439147;s:2:"ip";s:9:"127.0.0.1";s:2:"ua";s:118:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/600.3.18 (KHTML, like Gecko) Version/8.0.3 Safari/600.3.18";s:5:"login";i:1428229547;}}'),
+(14, 1, 'session_tokens', 'a:2:{s:64:"da7067f29414f6326e655b512e6b938da314ef256e4f73485e7d7405822ec9e3";a:4:{s:10:"expiration";i:1429439147;s:2:"ip";s:9:"127.0.0.1";s:2:"ua";s:118:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/600.3.18 (KHTML, like Gecko) Version/8.0.3 Safari/600.3.18";s:5:"login";i:1428229547;}s:64:"4bc92131e4ef340f1912c70398a9a11c8a5ebd5994e14fe333aef0b86bb8a430";a:4:{s:10:"expiration";i:1430471964;s:2:"ip";s:3:"::1";s:2:"ua";s:118:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/600.3.18 (KHTML, like Gecko) Version/8.0.3 Safari/600.3.18";s:5:"login";i:1429262364;}}'),
 (15, 1, 'wp_dashboard_quick_press_last_post_id', '87'),
 (16, 1, 'wp_user-settings', 'libraryContent=browse&advImgDetails=show&editor=html&hidetb=0'),
 (17, 1, 'wp_user-settings-time', '1427453938'),
@@ -1555,7 +1555,27 @@ INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALU
 (20, 1, 'metaboxhidden_nav-menus', 'a:7:{i:0;s:30:"woocommerce_endpoints_nav_link";i:1;s:8:"add-post";i:2;s:9:"add-forum";i:3;s:11:"add-product";i:4;s:12:"add-post_tag";i:5;s:15:"add-product_cat";i:6;s:15:"add-product_tag";}'),
 (21, 1, 'closedpostboxes_page', 'a:0:{}'),
 (22, 1, 'metaboxhidden_page', 'a:0:{}'),
-(23, 1, 'nav_menu_recently_edited', '17');
+(23, 1, 'nav_menu_recently_edited', '17'),
+(24, 1, 'billing_first_name', ''),
+(25, 1, 'billing_last_name', ''),
+(26, 1, 'billing_company', ''),
+(27, 1, 'billing_address_1', ''),
+(28, 1, 'billing_address_2', ''),
+(29, 1, 'billing_city', ''),
+(30, 1, 'billing_postcode', ''),
+(31, 1, 'billing_country', ''),
+(32, 1, 'billing_state', ''),
+(33, 1, 'billing_phone', ''),
+(34, 1, 'billing_email', ''),
+(35, 1, 'shipping_first_name', ''),
+(36, 1, 'shipping_last_name', ''),
+(37, 1, 'shipping_company', ''),
+(38, 1, 'shipping_address_1', ''),
+(39, 1, 'shipping_address_2', ''),
+(40, 1, 'shipping_city', ''),
+(41, 1, 'shipping_postcode', ''),
+(42, 1, 'shipping_country', ''),
+(43, 1, 'shipping_state', '');
 
 -- --------------------------------------------------------
 
@@ -1581,7 +1601,7 @@ CREATE TABLE IF NOT EXISTS `wp_users` (
 --
 
 INSERT INTO `wp_users` (`ID`, `user_login`, `user_pass`, `user_nicename`, `user_email`, `user_url`, `user_registered`, `user_activation_key`, `user_status`, `display_name`) VALUES
-(1, 'WolfgangX101', '$P$BAbpQQptRZ3L6XpMe0SkVwQ0lTDmA8/', 'wolfgangx101', 'francescoborelli101@gmail.com', '', '2015-03-23 07:58:08', '', 0, 'WolfgangX101');
+(1, 'WolfgangX101', '$P$BUYgt99uy4TRhinp59dj2XMGnhLm3k.', 'wolfgangx101', 'francescoborelli101@gmail.com', '', '2015-03-23 07:58:08', '', 0, 'WolfgangX101');
 
 -- --------------------------------------------------------
 
@@ -1921,7 +1941,7 @@ MODIFY `term_taxonomy_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCRE
 -- AUTO_INCREMENT for table `wp_usermeta`
 --
 ALTER TABLE `wp_usermeta`
-MODIFY `umeta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=24;
+MODIFY `umeta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=44;
 --
 -- AUTO_INCREMENT for table `wp_users`
 --
